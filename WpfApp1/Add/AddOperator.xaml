@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfApp1.AddOperator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Добавить оператора" Height="450" Width="800">
+    <Grid Background="YellowGreen" Margin="0,2,0,-2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Сохранить" Background="AliceBlue" Command="{Binding SaveOperator}" Margin="70,376,70,37" Grid.Row="1"/>
+        <TextBlock Margin="10,20,242,397" Grid.Row="1" ><Run Language="ru-ru" Text="ФИО Оператора"/></TextBlock>
+
+        <TextBlock Margin="10,68,266,352" Grid.Row="1" ><Run Text="Номер "/><Run Text=" "/><Run Language="ru-ru" Text="телефона"/></TextBlock>
+        <TextBlock Margin="10,115,266,305" Grid.Row="1" ><Run Text="ID "/><Run Text=" "/><Run Language="ru-ru" Text="оператора"/></TextBlock>
+        <TextBox Text="{Binding AddOperator.OperatorFIO}" RenderTransformOrigin="-0.14,0.517" Margin="117,20,53,392" Grid.Row="1"/>
+        <TextBox Text="{Binding AddOperator.PhoneNumber}" RenderTransformOrigin="-0.14,0.517" Margin="116,64,53,348" Grid.Row="1"/>
+        <TextBox Text="{Binding AddOperator.OperatorID}" RenderTransformOrigin="-0.14,0.517" Margin="116,111,53,301" Grid.Row="1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>

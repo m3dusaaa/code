@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfApp1.AddTour"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Добавить путевку">
+
+    <Grid Background="YellowGreen" Margin="-1,23,1,-23">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button Content="Сохранить" Background="AliceBlue" Command="{Binding SaveTour}" Margin="70,376,70,37" Grid.Row="1"/>
+        <TextBlock Margin="10,20,290,398" Grid.Row="1" ><Run Language="ru-ru" Text="Страна"/></TextBlock>
+        <TextBlock Margin="10,65,266,355" Grid.Row="1" ><Run  Text="Город"/></TextBlock>
+        <TextBlock Margin="10,111,242,306" Grid.Row="1" ><Run Language="ru-ru" Text="Номер заказа"/></TextBlock>
+        <TextBlock Margin="10,151,242,266" Grid.Row="1" ><Run Language="ru-ru" Text="Длительность"/></TextBlock>
+        <TextBlock Margin="5,231,295,189" Grid.Row="1" ><Run Language="ru-ru" Text="Стоимость"/></TextBlock>
+        <TextBlock Margin="10,189,290,230" Grid.Row="1" ><Run Language="ru-ru" Text="Отель"/></TextBlock>
+        <TextBlock Margin="5,269,295,150" Grid.Row="1" ><Run Language="ru-ru" Text="ID оператора"/></TextBlock>
+        <TextBox Text="{Binding AddTour.City}" RenderTransformOrigin="-0.14,0.517" Margin="70,65,139,355" Grid.Row="1"/>
+        <TextBox Text="{Binding AddTour.Country}" RenderTransformOrigin="-0.14,0.517" Margin="70,20,139,400" Grid.Row="1"/>
+        <TextBox Text="{Binding AddTour.NomerZakaza}" RenderTransformOrigin="-0.14,0.517" Margin="100,111,109,309" Grid.Row="1"/>
+        <TextBox Text="{Binding AddTour.Price}" RenderTransformOrigin="-0.14,0.517" Margin="99,230,205,189" Grid.Row="1" />
+        <TextBox Text="{Binding AddTour.Dlitelnost}" RenderTransformOrigin="-0.14,0.517" Margin="100,151,108,269" Grid.Row="1"/>
+        <TextBox Text="{Binding AddTour.hotel}" RenderTransformOrigin="-0.14,0.517" Margin="99,189,109,231" Grid.Row="1"/>
+        <TextBox Text="{Binding AddTour.IDOperator}" RenderTransformOrigin="-0.14,0.517" Margin="99,269,205,150" Grid.Row="1" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+    </Window>

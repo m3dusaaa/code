@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.Add.AddClient"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Add"
+        mc:Ignorable="d"
+        Title="Добавить клиента" Height="450" Width="800">
+    <Grid Background="YellowGreen">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DatePicker Text ="{Binding AddClient.Birthday}" x:Name="datePicker"
+              SelectedDate="01/01/22"
+              SelectedDateFormat="Long" Margin="112,106,149,307" Grid.Row="1"/>
+        <Button Content="Сохранить" Command="{Binding SaveClient}" Margin="70,376,70,37" Grid.Row="1"/>
+        <TextBlock Margin="10,20,242,397" Grid.Row="1" ><Run Language="ru-ru" Text="ID Клиента"/></TextBlock>
+        <TextBlock Margin="10,65,266,355" Grid.Row="1" ><Run Text="ФИО "/><Run Text=" "/><Run Language="ru-ru" Text="клиента"/></TextBlock>
+        <TextBlock Margin="10,108,242,309" Grid.Row="1" ><Run Language="ru-ru" Text="Дата рождения"/></TextBlock>
+        <TextBlock Margin="10,150,242,267" Grid.Row="1" ><Run Language="ru-ru" Text="ID обслуживающего оператора"/></TextBlock>
+        <TextBox Text="{Binding AddClient.FIO}" RenderTransformOrigin="-0.14,0.517" Margin="112,65,57,347" Grid.Row="1"/>
+        <TextBox Text="{Binding AddClient.IDClient}" RenderTransformOrigin="-0.14,0.517" Margin="112,20,58,392" Grid.Row="1"/>
+        <TextBox Text="{Binding AddClient.OperatorId}" RenderTransformOrigin="-0.14,0.517" Margin="213,145,132,267" Grid.Row="1"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Window>
